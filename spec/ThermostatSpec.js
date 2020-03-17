@@ -10,12 +10,23 @@ describe("Thermostat", function() {
     it("starts at a temperature of 20 degress", function() {
       expect(thermostat.temperature).toEqual(20)
     });
+
+    it("power saving mode is on", function() {
+      expect(thermostat.powerSave).toEqual(true)
+    });
   });
 
   describe("up", function() {
-    it("increases temperature", function(){
+    it("increases temperature", function() {
       thermostat.up();
       expect(thermostat.temperature).toEqual(21)
+    });
+  });
+
+  describe("down", function() {
+    it("decreases temperature", function() {
+      thermostat.down();
+      expect(thermostat.temperature).toEqual(19)
     });
   });
 
