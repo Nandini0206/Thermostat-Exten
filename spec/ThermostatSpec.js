@@ -12,6 +12,13 @@ describe("Thermostat", function() {
     });
   });
 
+  describe("up", function() {
+    it("increases temperature", function(){
+      thermostat.up();
+      expect(thermostat.temperature).toEqual(21)
+    });
+  });
+
   // it("should be able to play a Song", function() {
   //   player.play(song);
   //   expect(player.currentlyPlayingSong).toEqual(song);

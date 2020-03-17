@@ -2,8 +2,9 @@ function Thermostat() {
   this.temperature = 20;
 }
 
-
-
+Thermostat.prototype.up = function() {
+  this.temperature += 1
+};
 // Player.prototype.play = function(song) {
 //   this.currentlyPlayingSong = song;
 //   this.isPlaying = true;
